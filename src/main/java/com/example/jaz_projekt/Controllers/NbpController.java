@@ -13,15 +13,16 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/nbp")
 public class NbpController {
     private NbpService nbpService;
 
-    @GetMapping("")
+
     public NbpController(NbpService nbpService) {
         this.nbpService = nbpService;
     }
 
+    @GetMapping("/get")
     public ResponseEntity<Currencies> getData(@RequestParam Date startDate, @RequestParam Date endDate) {
         void currencies = nbpService.getCurrencies(startDate, endDate);
         return ResponseEntity.ok(new Currencies(startDate, endDate));
