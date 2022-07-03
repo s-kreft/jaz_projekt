@@ -1,4 +1,6 @@
 package com.example.jaz_projekt.Repository;
 
-public interface nbpRepository {
+public interface nbpRepository extends JpaRepository<>{
+
+
 }
