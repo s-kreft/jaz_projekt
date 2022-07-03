@@ -13,6 +13,11 @@ public class Currencies {
         this.endDate = endDate;
     }
 
+    public Currencies(Date startDate, Date endDate) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
     public double getAverage() {
         return average;
     }
